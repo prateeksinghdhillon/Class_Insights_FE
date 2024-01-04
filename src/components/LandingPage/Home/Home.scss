@@ -1,0 +1,64 @@
+@import "../../../variables/variables.scss";
+.home {
+  position: absolute;
+  //   top: 80px;
+  height: 4000px;
+  background-color: $background-color;
+  .quote {
+    display: flex;
+    gap: rem(24);
+    flex-direction: column;
+    padding: rem(96) rem(48) rem(96) rem(48);
+    // justify-content: center;
+    text-align: center;
+    align-items: center;
+    .quote-heading {
+      max-width: rem(800);
+      font-size: 48px;
+      text-align: center;
+      font-family: $font-family-pt-serif;
+      font-weight: 700;
+      line-height: 150%;
+    }
+    .description {
+      font-family: $font-family;
+      font-size: rem(18);
+    }
+    .quote-butn-group {
+      display: inline-flex;
+      justify-content: center;
+      gap: rem(24);
+      .butn {
+        padding: rem(4) rem(12) rem(4) rem(12);
+        font-weight: 700;
+      }
+      .login {
+        height: rem(34);
+        width: rem(130);
+        border: none;
+        text-transform: capitalize;
+        background-color: $background-color;
+      }
+      .login:hover {
+        color: $color-acent;
+      }
+      .register {
+        height: rem(34);
+        width: rem(130);
+        // text-transform: capitalize;
+        background-color: $primary-color;
+        border-radius: rem(8);
+        color: $background-color;
+        border: none;
+      }
+      .register:hover {
+        background-color: $primary-color2;
+      }
+    }
+  }
+  @media (max-width: 380px) {
+    .quote .quote-heading {
+        font-size: rem(37);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// app primary--------------------------
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+$background-color: #f5f4f4;
+$primary-color: #147487;
+$primary-color2: #0a3a44;
+$primary-light: #c0dee4;
+$color-acent: #c9e8ff;
+
+// font---------------------------
+$font-family: "Inter Tight";
+$font-family-pt-serif: PT Serif;
+$font-color: #000000;
+$font-weight-700: 700;
+$font-weight-500: 500;
+
+@function rem($px, $base: 16) {
+  @return calc($px / $base) * 1rem;
+}
