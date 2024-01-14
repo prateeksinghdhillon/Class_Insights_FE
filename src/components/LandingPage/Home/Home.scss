@@ -1,8 +1,7 @@
 @import "../../../variables/variables.scss";
 .home {
   position: absolute;
-  //   top: 80px;
-  height: 4000px;
+  top: rem(80);
   background-color: $background-color;
   .quote {
     display: flex;
@@ -14,10 +13,10 @@
     align-items: center;
     .quote-heading {
       max-width: rem(800);
-      font-size: 48px;
+      font-size: rem(48);
       text-align: center;
       font-family: $font-family-pt-serif;
-      font-weight: 700;
+      font-weight: $font-weight-700;
       line-height: 150%;
     }
     .description {
@@ -30,7 +29,7 @@
       gap: rem(24);
       .butn {
         padding: rem(4) rem(12) rem(4) rem(12);
-        font-weight: 700;
+        font-weight: $font-weight-700;
       }
       .login {
         height: rem(34);
@@ -58,7 +57,346 @@
   }
   @media (max-width: 380px) {
     .quote .quote-heading {
-        font-size: rem(37);
+      font-size: rem(37);
+    }
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(64) rem(48) rem(64) rem(48);
+    background-color: $primary-color3;
+    gap: rem(48);
+    .features-heading {
+      .overline {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: rem(12);
+        font-family: $font-family;
+        font-weight: $font-weight-700;
+        line-height: 150%;
+        text-transform: uppercase;
+      }
+      .heading {
+        font-size: rem(35);
+        font-family: $font-family-pt-serif;
+        font-weight: $font-weight-600;
+        line-height: 150%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      .underline {
+        font-size: rem(18);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    .features-tiles {
+      gap: rem(24);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      .tile {
+        width: auto;
+        display: flex;
+        justify-content: flex-start;
+        padding: rem(24);
+        background-color: $primary-light;
+
+        .tile-image {
+          height: 2rem;
+          width: 2rem;
+          margin-right: rem(24);
+          // .image {
+          //   height: 2rem;
+          //   width: 2rem;
+          // }
+        }
+        .tile-container {
+          display: flex;
+          flex-direction: column;
+          gap: rem(16);
+          .tile-head {
+            font-size: rem(20);
+            font-weight: $font-weight-600;
+            line-height: rem(28);
+          }
+          .tile-Des {
+            font-size: rem(16);
+          }
+        }
+      }
+      @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(64) rem(48) rem(64) rem(48);
+    // background-color: $primary-color3;
+    gap: rem(48);
+    .pricing-head {
+      .overline {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: rem(12);
+        font-family: $font-family;
+        font-weight: $font-weight-700;
+        line-height: 150%;
+        text-transform: uppercase;
+      }
+      .heading {
+        font-size: rem(35);
+        font-family: $font-family-pt-serif;
+        font-weight: $font-weight-600;
+        line-height: 150%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      .underline {
+        font-size: rem(18);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    .plan-container {
+      display: flex;
+      gap: rem(32);
+      .plan {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+        padding: rem(32);
+        background-color: $color-acent;
+        .plan-head {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: rem(24);
+          .tier {
+            text-transform: uppercase;
+            font-size: rem(20);
+            font-family: $font-family;
+            font-weight: $font-weight-600;
+            line-height: 150%;
+          }
+          .tier-des {
+            font-size: rem(16);
+            font-family: $font-family;
+            font-weight: $font-weight-400;
+            line-height: 150%;
+          }
+        }
+        .plan-price {
+          display: flex;
+          align-items: center;
+          margin-bottom: rem(32);
+          flex-direction: row;
+          .price-sign {
+            width: auto;
+            font-size: 1.15rem;
+            margin-top: rem(32);
+            font-weight: $font-weight-300;
+          }
+          .price {
+            width: auto;
+            font-size: 4rem;
+            font-weight: $font-weight-700;
+          }
+          .period {
+            width: auto;
+            font-size: 1.15rem;
+            margin-top: rem(32);
+            font-weight: $font-weight-300;
+          }
+        }
+        .plan-des {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: rem(16);
+          align-items: flex-start;
+          .des {
+            gap: rem(4);
+            flex: 0 0 auto;
+            width: 100%;
+            display: flex;
+            margin-bottom: rem(16);
+            flex-direction: row;
+            .tick {
+              width: auto;
+            }
+            .text {
+              width: auto;
+              font-size: rem(16);
+              font-family: $font-family;
+              font-weight: $font-weight-400;
+              line-height: 150%;
+            }
+          }
+        }
+        .continue-butn {
+          color: $font-color;
+          border: rem(1) solid;
+          font-family: $font-family;
+          font-weight: $font-weight-700;
+          padding-top: rem(8);
+          border-color: $font-color;
+          padding-left: rem(24);
+          border-radius: rem(8);
+          padding-right: rem(24);
+          padding-bottom: rem(8);
+          background-color: transparent;
+        }
+        .continue-butn:hover {
+          color: $primary-color;
+          border-color: $primary-color;
+        }
+        .choose-butn {
+          color: $font-color-alternate;
+          transition: 0.3s;
+          font-family: $font-family;
+          font-weight: $font-weight-700;
+          padding: rem(8) rem(24) rem(8) rem(24);
+          background-color: $primary-color;
+          border: none;
+          line-height: 1.15;
+        }
+        .choose-butn:hover {
+          background-color: $primary-color2;
+        }
+      }
+      @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+      }
+    }
+  }
+  .banner {
+    padding: rem(96) rem(80) rem(96) rem(80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .banner-head {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: rem(35);
+      font-family: $font-family-pt-serif;
+      font-weight: $font-weight-600;
+      min-width: rem(250);
+      line-height: 150%;
+    }
+    .banner-des {
+      text-align: center;
+      margin-top: rem(32);
+      margin-bottom: rem(32);
+      min-width: rem(250);
+    }
+    .banner-butn {
+      // height: 2.125rem;
+      // width: 6.8125rem;
+      width: auto;
+      padding: rem(8) rem(24) rem(8) rem(24);
+      text-transform: capitalize;
+      background-color: $primary-color;
+      border-radius: 0.5rem;
+      color: $font-color-alternate;
+      min-width: rem(180);
+      line-height: 1.15;
+      font-weight: $font-weight-700;
+      border: none;
+    }
+    .banner-butn:hover {
+      background-color: $primary-color2;
+    }
+  }
+  .faq-container {
+    display: flex;
+    padding: rem(64) rem(48) rem(64) rem(48);
+    gap: rem(32);
+    background-color: $color-acent;
+    .faq-head {
+      max-width: 25%;
+      width: auto;
+      .overline {
+        display: flex;
+        justify-content: flex-start;
+        font-size: rem(12);
+        font-family: $font-family;
+        font-weight: $font-weight-700;
+        line-height: 150%;
+        text-transform: uppercase;
+      }
+      .heading {
+        font-size: rem(35);
+        font-family: $font-family-pt-serif;
+        font-weight: $font-weight-600;
+        line-height: 150%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: rem(24);
+      }
+      .underline {
+        font-size: rem(18);
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+    .faq-questions {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      align-items: flex-start;
+      .question {
+        display: flex;
+        gap: rem(16);
+        flex-direction: column;
+        align-items: flex-start;
+        .question-text {
+          font-size: rem(20);
+          font-weight: $font-weight-700;
+          line-height: 150%;
+        }
+        .answer {
+          font-size: rem(16);
+          font-weight: $font-weight-400;
+          line-height: 150%;
+        }
+      }
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+      .faq-head {
+        max-width: 100%;
+        width: auto;
+        .overline {
+          justify-content: center;
+          text-align: center;
+        }
+        .heading {
+          justify-content: center;
+          text-align: center;
+        }
+        .underline {
+          justify-content: center;
+          text-align: center;
+        }
+      }
     }
   }
 }
