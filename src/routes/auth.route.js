@@ -1,6 +1,7 @@
 import Home from "../pages/LandingPage/Home/Home";
 import { LoginUser } from "../pages/loginUser/loginUser";
-import  RegisterUser  from "../pages/registerUser/registerUser";
+//import  RegisterUser  from "../pages/registerUser/registerUser";
+import {RegisterSchool} from '../pages/registerUser/registerSchool';
 
 const authRoutes =[
     {
@@ -15,7 +16,7 @@ const authRoutes =[
     },
     {
         path:'/register',
-        element : <RegisterUser/>,
+        element : <RegisterSchool/>,
         title : 'Register'
     }
 ]
